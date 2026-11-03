@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniRequest — Requêtes universitaires</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section id="login" class="login-page">
+    <div class="login-box">
+      <div class="crest">UR</div>
+      <h1>UniRequest</h1>
+      <p class="lead">Service des requêtes de la scolarité : relevés, attestations, recours de notes et réservations de salle, avec suivi et trace.</p>
+      <div id="accounts" class="accounts"></div>
+      <form id="login-form" class="login-form">
+        <input name="email" type="email" placeholder="Courriel" required>
+        <input name="password" type="password" placeholder="Mot de passe" required>
+        <button class="btn" type="submit">Connexion</button>
+      </form>
+      <p id="login-error" class="err"></p>
+    </div>
+  </section>
+
+  <section id="app" class="app hidden">
+    <aside class="side">
+      <div>
+        <div class="brand-name">UniRequest</div>
+        <div class="brand-sub">Scolarité · campus</div>
+      </div>
+      <div id="who" class="who"></div>
+      <button class="nav-btn active" data-view="dashboard">Tableau de bord</button>
+      <button class="nav-btn" data-view="liste">Requêtes</button>
+      <button class="nav-btn" id="nav-new" data-view="nouvelle">Nouvelle requête</button>
+      <button class="nav-btn" data-view="aide">Aide</button>
+      <div class="spacer"></div>
+      <button class="ghost" id="logout">Se déconnecter</button>
+    </aside>
+    <main class="main">
+      <div id="flash" class="flash hidden"></div>
+      <section id="view-dashboard"></section>
+      <section id="view-liste" class="hidden"></section>
+      <section id="view-nouvelle" class="hidden"></section>
+      <section id="view-detail" class="hidden"></section>
+      <section id="view-aide" class="hidden"></section>
+    </main>
+  </section>
+  <script src="/app.js"></script>
+</body>
+</html>

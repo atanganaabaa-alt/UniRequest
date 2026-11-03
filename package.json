@@ -1,0 +1,17 @@
+{
+  "name": "unirequest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Application de gestion des requêtes dans une institution universitaire",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
